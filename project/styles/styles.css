@@ -1,3 +1,5 @@
+/* main.css */
+
 /* Базовые стили */
 body {
     font-family: Arial, sans-serif;
@@ -5,45 +7,19 @@ body {
     padding: 0;
     background-color: #222;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Красный текст */
 .highlight {
-    color: #ff0000; /* Красный цвет */
-}
-
-/* Стили для навигации */
-header {
-    background-color: #111;
-    padding: 20px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 20px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+    color: #ff0000;
 }
 
 /* Секция hero */
 .hero {
-    position: relative; /* Создаём слой для текста поверх фона */
+    position: relative;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -51,22 +27,22 @@ nav ul li a:hover {
     padding: 20px;
     background: url("../source/kisspng_su2_code_computational_fluid_dynamics_pointwise_i_su2_wiki.png")
         no-repeat center right;
-    background-size: contain; /* Масштабируем изображение */
-    background-color: #333; /* Резервный фон */
+    background-size: contain;
+    background-color: #333;
 }
 
 .hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
     position: relative;
-    z-index: 2; /* Текст поверх фонового изображения */
+    z-index: 2;
 }
 
 .hero p {
     font-size: 1.5em;
     margin-bottom: 30px;
     position: relative;
-    z-index: 2; /* Текст поверх фонового изображения */
+    z-index: 2;
 }
 
 .hero button {
@@ -78,7 +54,7 @@ nav ul li a:hover {
     cursor: pointer;
     width: 200px;
     position: relative;
-    z-index: 2; /* Кнопка поверх фонового изображения */
+    z-index: 2;
 }
 
 .hero button:hover {
@@ -173,15 +149,6 @@ nav ul li a:hover {
     height: calc(100% - 60px);
 }
 
-/* Стили для футера */
-.site-footer {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    border-top: 1px solid #fff;
-}
 /* Секция для работы с моделью */
 .model-section {
     min-height: 80vh;
@@ -192,20 +159,15 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Стили для заглушки изображения */
-.model-placeholder {
-    width: 300px;
-    height: 300px;
-    background-color: #555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
+.model-placeholder img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Стили для кнопок */
 .model-buttons {
     display: flex;
     gap: 20px;
@@ -226,25 +188,46 @@ nav ul li a:hover {
     background-color: #ddd;
 }
 
-/* Обёртка страницы: заставляет контент занимать всю высоту экрана */
+/* Обёртка страницы */
 .page-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Основной контент растягивается, чтобы футер всегда был внизу */
+/* Основной контент */
 .main-content {
     flex: 1;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-/* Основной контент растягивается, заполняя пространство */
-.content {
-    flex: 1;
+/* Стили для страницы результатов расчета */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result-item {
+    background-color: #444;
     padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Дополнительное пространство перед футером */
-.extra-space {
-    height: 200px; /* Можно увеличить, если футер не прижимается */
+.result-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.result-item p {
+    margin-top: 10px;
+    font-size: 18px;
 }

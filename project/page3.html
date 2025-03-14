@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Результаты расчета</title>
+        <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="styles/header.css" />
+        <link rel="stylesheet" href="styles/footer.css" />
+    </head>
+    <body>
+        <!-- Обёртка, растягивающаяся на всю высоту экрана -->
+        <div class="page-wrapper">
+            <!-- Хедер -->
+            <div id="header-container"></div>
+
+            <!-- Основной контент -->
+            <main class="main-content">
+                <section class="results-section">
+                    <h1>Результаты расчета</h1>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="Вид спереди"
+                            />
+                            <p>Вид спереди</p>
+                        </div>
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="Вид слева"
+                            />
+                            <p>Вид слева</p>
+                        </div>
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="Вид справа"
+                            />
+                            <p>Вид справа</p>
+                        </div>
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="Вид сверху"
+                            />
+                            <p>Вид сверху</p>
+                        </div>
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="Вид снизу"
+                            />
+                            <p>Вид снизу</p>
+                        </div>
+                        <div class="result-item">
+                            <img
+                                src="./source/placeholder.png"
+                                alt="В разрезе"
+                            />
+                            <p>В разрезе</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Футер -->
+            <div id="footer-container"></div>
+        </div>
+
+        <!-- Скрипты для подгрузки компонентов -->
+        <script src="./scripts/loadHeader.js"></script>
+        <script src="./scripts/loadFooter.js"></script>
+    </body>
+</html>
