@@ -9,10 +9,9 @@
         <link rel="stylesheet" href="styles/footer.css" />
     </head>
     <body>
-        <!-- Контейнер для хедера -->
+        <!-- хедера -->
         <div id="header-container"></div>
 
-        <!-- Секция hero с фоновым изображением -->
         <section class="hero">
             <h1 class="highlight">
                 РАССЧИТЫВАЙТЕ АЭРОДИНАМИКУ ПРОСТО И БЫСТРО
@@ -21,7 +20,7 @@
                 Загружайте данные — получайте точные расчеты онлайн. Легко,
                 удобно, профессионально.
             </p>
-            <button>Рассчитать</button>
+            <button id="calculate-btn">Рассчитать</button>
         </section>
 
         <section class="features">
@@ -41,13 +40,13 @@
             </div>
         </section>
 
-        <section class="form-section">
+        <section class="form-section" id="form-section">
             <div class="form-container">
                 <div class="input-fields">
                     <input type="text" placeholder="Давление" />
                     <input type="text" placeholder="Скорость потока воздуха" />
                     <input type="text" placeholder="Плотность среды" />
-                    <button type="submit">Отправить</button>
+                    <button id="submit-btn" type="submit">Отправить</button>
                 </div>
                 <div class="upload-field">
                     <label for="file-upload">Загрузите 3D модель</label>
@@ -56,11 +55,13 @@
             </div>
         </section>
 
-        <!-- Контейнер для футера -->
+        <!-- футер -->
         <div id="footer-container"></div>
 
-        <!-- Скрипты для подгрузки компонентов -->
+        <!-- скрипты -->
         <script src="./scripts/loadHeader.js"></script>
         <script src="./scripts/loadFooter.js"></script>
+        <script src="./scripts/scroll.js"></script>
+        <script src="./scripts/mainPageFormHandler.js"></script>
     </body>
 </html>
